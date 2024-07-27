@@ -1,7 +1,9 @@
+import TrendAnalyzer from "@/components/TrendAnalyzer";
+
 export default function Home() {
   return (
-    <main>
-      lets do this
-    </main>
+    <div className="container mx-auto p-4">
+      <TrendAnalyzer />
+    </div>
   );
 }
