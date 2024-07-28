@@ -20,7 +20,8 @@ const TrendAnalyzer: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
 
-    const handleAnalyze = async () => {
+    const handleAnalyze = async (e: React.FormEvent) => {
+        e.preventDefault();
         setLoading(true);
         setError(null);
 
@@ -94,23 +95,25 @@ const TrendAnalyzer: React.FC = () => {
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4 text-center">Go trending with Trendalyzer!</h1>
-            <div className="flex flex-col md:flex-row items-center justify-center mb-4 gap-x-4 gap-y-4 md:gap-y-0">
+            <form onSubmit={handleAnalyze} className="flex flex-col md:flex-row items-center justify-center mb-4 gap-x-4 gap-y-4 md:gap-y-0">
                 <label htmlFor="field" className="sr-only">Field</label>
                 <input
                     type="text"
+                    id="field"
                     value={field}
                     onChange={(e) => setField(e.target.value)}
                     placeholder="Topic to analyze trends on (e.g., 'SaaS in Bay Area', 'Clothing Industry')"
                     className="border p-2 w-full max-w-xl rounded-md focus:outline-none focus:ring-1 focus:ring-zinc-400"
+                    autoComplete='off'
                 />
                 <button
-                    onClick={handleAnalyze}
-                    className="bg-black text-white py-2 px-4 rounded-md"
+                    type="submit"
+                    className={`py-2 px-4 rounded-md text-white ${loading ? 'bg-zinc-500 cursor-not-allowed' : 'bg-black hover:bg-zinc-800'}`}
                     disabled={loading}
                 >
-                    {loading ? 'Analyzing...' : 'Analyze'}
+                    Analyze
                 </button>
-            </div>
+            </form>
 
             {loading && (
                 <>
