@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 
-export async function POST(req, res) {
+export async function POST(req) {
     const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
     const { field } = await req.json();
@@ -16,9 +16,6 @@ export async function POST(req, res) {
       "description": "A detailed description of the trend.",
       "type": "current or future",
       "impact": "impact of the trend (e.g. low, high)",
-      "industry": "Technology",
-      "source": "Source of information",
-      "relevance": "Business/Personal",
       "actionable_advice": "What actions should be taken based on this trend."
     }
     Provide up to 5 trends for the type 'current' and 3 to 5 more for possible future trends that you think would become available for this ${field} with the type 'future'`
@@ -33,9 +30,27 @@ export async function POST(req, res) {
 
     console.log("JSON string from OpenAI", jsonString);
 
+    let trends = [];
+
     if (jsonString && jsonString[1]) {
         try {
-            const trends = JSON.parse(jsonString[1]);
+            trends = JSON.parse(jsonString[1]);
+
+            if (Array.isArray(trends)) {
+                trends = trends.filter(item => (
+                    item &&
+                    typeof item.id === 'number' &&
+                    typeof item.trend === 'string' &&
+                    typeof item.period === 'string' &&
+                    typeof item.description === 'string' &&
+                    typeof item.type === 'string' &&
+                    typeof item.impact === 'string' &&
+                    typeof item.actionable_advice === 'string'
+                ));
+            } else {
+                trends = [];
+            }
+
             console.log("Trends parsed from JSON", trends);
             return Response.json(trends);
         } catch (error) {
