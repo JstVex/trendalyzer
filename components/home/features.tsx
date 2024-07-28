@@ -2,7 +2,7 @@ import { BarChart, Layers, PieChart, Rocket, TrendingUp, Users } from "lucide-re
 
 const Features = () => {
     return (
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="max-w-screen py-12 md:py-24 lg:py-32">
             <div className="container space-y-12 mx-auto px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <div className="space-y-2">

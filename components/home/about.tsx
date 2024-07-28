@@ -2,7 +2,7 @@ import { PieChart, Rocket, TrendingUp } from "lucide-react";
 
 const About = () => {
     return (
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-zinc-100">
+        <section id="about" className="max-w-screen py-12 md:py-24 lg:py-32 bg-zinc-100">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
                     <div className="space-y-2">
@@ -10,7 +10,7 @@ const About = () => {
                             About Our Platform
                         </div>
                         <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                            Gain Valuable Insights with Trandalyzer
+                            Gain Valuable Insights with Trendalyzer
                         </h2>
                         <p className="max-w-[600px] md:text-lg/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                             Our trend analysis platform is designed to help you stay ahead of the curve. Leverage our advanced
