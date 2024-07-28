@@ -40,7 +40,7 @@ You are an AI assistant tasked with analyzing current and future trends for the 
 
 Ensure the response adheres strictly to this JSON format. Do not include any text outside the JSON structure.
 
-Provide up to 5 trends for the type 'current' and 3 to 5 more for possible future trends that you think would become available for this ${field} with the type 'future'.
+Provide up to 6 trends for the type 'current' (include at least one for each impact type) and up to 5 more for possible future trends that you think would become available for this ${field} with the type 'future'.
 `;
 
     const completion = await openai.chat.completions.create({
