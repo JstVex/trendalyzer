@@ -16,6 +16,17 @@ const Footer = () => {
                         Twitter
                     </Link>
                 </div>
+                <div className="mt-2 flex justify-center gap-4">
+                    <Link href="mailto:team1@example.com" className="hover:underline" prefetch={false}>
+                        hh14lulu@gmail.com
+                    </Link>
+                    <Link href="mailto:team2@example.com" className="hover:underline" prefetch={false}>
+                        ptu4@go.pasadena.edu
+                    </Link>
+                    <Link href="mailto:team3@example.com" className="hover:underline" prefetch={false}>
+                        yzhuangzhigue@go.pasadena.edu
+                    </Link>
+                </div>
             </div>
         </footer>
     );
