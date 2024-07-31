@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Trendalyzer
 
-## Getting Started
+Trendalyzer is a powerful trend analysis platform designed to help businesses and individuals stay ahead of the curve. With Trendalyzer, users can analyze current and future trends in various fields, leveraging advanced AI to gain valuable insights and make data-driven decisions.
 
-First, run the development server:
+This is a project me and my team created in 36 hours as part of Headstarter hackathon 1.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Key Features
+
+- **Real-time Trend Analysis**: Enter any field of interest and discover the latest and upcoming trends.
+- **Current and Future Trends**: Separate tabs for current and future trends to help you stay prepared.
+- **Impact Analysis**: Visual indicators and detailed descriptions to understand the impact of each trend.
+- **Actionable Advice**: Practical tips and case studies to help implement strategies based on trends.
+- **User-friendly Interface**: Modern design with responsive layout for an optimal user experience.
+
+## Technologies Used
+
+- **Next.js** and **Tailwind CSS**: For the frontend development.
+- **OpenAI GPT-4**: For advanced AI trend analysis.
+- **Vercel**: For deployment and hosting.
+
+## Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repo**
+
+```sh
+   git clone https://github.com/yourusername/trendalyzer.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install NPM packages**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+   npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Create a .env.local file and add your OpenAI API key**
 
-## Learn More
+```sh
+OPENAI_API_KEY=your_openai_api_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the Development Server**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. Enter the topic you want to analyze trends on (e.g., "Starting a SaaS in the Bay Area", "Personal Sporting Goods Brand").
+2. Click on the "Analyze" button.
+3. View the analyzed trends under the "Current Trends" and "Future Trends" tabs.
+4. Each trend card will display detailed information including period, description, impact, actionable advice, and more.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. **Fork the Project**
+
+```sh
+git clone https://github.com/JstVex/trendalyzer.git
+```
+
+2. **Create your new branch**
+
+```sh
+git checkout -b feature/AmazingFeature
+```
+
+3. **Commit your changes**
+
+```sh
+git commit -m 'Add some AmazingFeature'
+```
+
+4. **Push to the Branch**
+
+```sh
+git push origin feature/AmazingFeature
+```
